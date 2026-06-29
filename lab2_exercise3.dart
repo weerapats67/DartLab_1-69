@@ -7,7 +7,7 @@ void main() {
   subjects.add('bio');
   print('All subjects ${subjects}');
   Map<String,int>  studentScores ={
-    'bio': 55,
+    'bio': 45,
     'math' : 75,
   };
   print('Score for mant: ${studentScores['mant']}');
@@ -16,4 +16,18 @@ void main() {
   print('Updated scores: $studentScores');
   print('All subjects in map: ${studentScores.keys}');
   print('All scores in map: ${studentScores.values}');
+  print('--------');
+  print('Subjects in "a"');
+  studentScores.forEach((subject, score){
+if(subject.toLowerCase().contains('a')){
+  print("$subject");
+}
+  });
+  print('--------');
+  print('subjects sroce > 50');
+  studentScores.forEach((subject, score) {
+if (score > 50){
+  print("$subject : $score");
+}
+  });
 }
