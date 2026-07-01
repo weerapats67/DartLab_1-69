@@ -28,7 +28,7 @@ print('Score: $score');
 
     var fruits = ['Apple', 'Banana', 'Cherry'];
     print('fruits');
-    for (var fruits in fruits){
-      print('- $fruits');
+    for (var fruit in fruits){
+      print('- $fruit');
     }
   }
