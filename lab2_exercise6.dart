@@ -1,31 +1,22 @@
-double calculateArea({
-  required double width,
-  required double height,
-}) {
+double rectangleArea(double width, double height) {
   return width * height;
 }
 
-double calculateVolume({
-  required double width,
-  required double height,
-  required double length,
-}) {
-  return width * height * length;
+double triangleArea(double base, double height) {
+  return 0.5 * base * height;
+}
+
+double cylinderVolume(double radius, double height) {
+  return 3.14 * radius * radius * height;
 }
 
 void main() {
-  double area = calculateArea(
-    width: 5.5,
-    height: 10.0,
-  );
-  print("Area = $area");
+  double rectangle = rectangleArea(5, 8);
+  print('Rectangle Area = $rectangle');
 
-  double volume = calculateVolume(
-    width: 5.0,
-    height: 4.0,
-    length: 3.0, 
+  double triangle = triangleArea(10, 6);
+  print('Triangle Area = $triangle');
 
-    
-  );
-  print("Volume = $volume");
+  double cylinder = cylinderVolume(5, 10);
+  print('Cylinder Volume = $cylinder');
 }
